@@ -1,35 +1,28 @@
-🔰 KhetPrithvi – AI-Based Crop Classification System
+# 🌾 KhetPrithvi
+An India-first crop classification system using **IBM Foundation Models**  
+(Prithvi-EO + Granite Time Series FM) fine-tuned on AgriFieldNet India.
 
-KhetPrithvi is a deep learning–powered smart agriculture project that classifies crop images using a PyTorch-based ResNet-18 convolutional neural network. The system allows users to upload crop images through a Streamlit web interface and instantly receive accurate crop predictions along with confidence scores.
+## 🚀 Inspiration
+Indian farms are small and fragmented. Global models fail here.  
+We wanted to build an **India-first crop ID system** that works on small fields,  
+uses SAR + optical fusion, and is explainable.
 
-The project leverages transfer learning on a pretrained ResNet-18 model to identify four major crops—Wheat, Rice, Maize, and Sugarcane—making it efficient even with limited datasets. KhetPrithvi aims to support farmers, agricultural officers, and researchers by providing a fast, user-friendly, and AI-driven crop identification solution.
+## ⚙️ Tech Stack
+- Python, PyTorch, Hugging Face Transformers
+- IBM Prithvi-EO Foundation Model
+- IBM Granite Time Series Foundation Model (TinyTimeMixer)
+- TorchGeo, Rasterio, Geopandas
+- Streamlit (for demo)
 
-✨ Key Features
+## 📂 Repo Structure
+- `train.py` → fine-tuning script
+- `model.py` → backbone (Prithvi + TSFM)
+- `app.py` → Streamlit demo dashboard
+- `dataloader.py` → loads AgriFieldNet India polygons & features
+- `demo/` → screenshots and charts
 
-Deep Learning–based crop image classification
-
-PyTorch + ResNet-18 CNN architecture
-
-Streamlit interactive web application
-
-Real-time prediction with confidence visualization
-
-Simple, farmer-friendly interface
-
-🛠️ Tech Stack
-
-Backend: Python, PyTorch, Torchvision
-
-Model: ResNet-18 (Transfer Learning)
-
-Frontend: Streamlit
-
-Libraries: NumPy, PIL, Matplotlib
-
-🎯 Use Case
-
-Crop identification from images
-
-Smart farming decision support
-
-Agricultural monitoring and verification
+## 🔧 Installation
+```bash
+git clone https://github.com/Amandixit158/khetprithvi.git
+cd khetprithvi
+pip install -r requirements.txt
